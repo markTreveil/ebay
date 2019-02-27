@@ -1,0 +1,5 @@
+{
+	"python" : [
+		{"name": "ebaysdk", "version" : ">=2.1.2"}
+	]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "ebay",
+  "version": "0.0.2",
+  "meta": {
+    "label": "Ebay",
+    "description": "Fetch data from Ebay search results",
+    "author": "Dataiku (Jean-Baptiste Rouquier)",
+    "icon": "icon-legal",
+    "licenseInfo": "Apache Software License",
+    "url": "https://www.dataiku.com/dss/plugins/info/ebay.html",
+    "tags": ["Connector"]
+  }
+}

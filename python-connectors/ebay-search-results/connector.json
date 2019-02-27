@@ -1,0 +1,35 @@
+{
+    "meta" : {
+        "label" : "ebay search results",
+        "author" : "Dataiku (Jean-Baptiste Rouquier)",
+        "tags" : ["API"]
+    },
+    "readable" : true,
+    "writable" : false,
+    "partitioningMode" : "CODE_DEFINED_UNLISTABLE",
+    "codeDefinesSchema" : true,
+
+    "params": [
+        {
+            "name": "ebay_app_id",
+            "label": "ebay app id",
+            "type": "STRING",
+            "description":"See https://go.developer.ebay.com",
+            "mandatory" : true
+        },
+        {
+            "name": "xml_query",
+            "label": "Search query as XML",
+            "type": "TEXTAREA",
+            "description": "See http://developer.ebay.com/devzone/finding/callref/finditemsadvanced.html for the syntax.",
+            "mandatory" : false
+        },
+        {
+            "name": "website_search_url",
+            "label": "Website search URL",
+            "type": "STRING",
+            "description": "Experimental. Do a search on ebay's website, then copy-paste the URL here, and the plugin will try to convert it to an XML search query. Results might differ from what you see in the browser. You should check backend.log for the result of the xml conversion, then copy paste the xml query to the previous field (in which case the plugin considers only the XML query, which is more robust).",
+            "mandatory" : false
+        }
+    ]
+}

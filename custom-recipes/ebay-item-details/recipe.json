@@ -1,0 +1,79 @@
+{
+    "meta": {
+        "label": "ebay item details",
+        "author": "Dataiku (Jean-Baptiste Rouquier)",
+        "description":"Get details about an itemId. Calls GetMultipleItems (20 items per call).",
+        "tags": ["API"]
+    },
+
+    "kind": "PYTHON",
+    "inputRoles": [
+        {
+            "name": "input_dataset",
+            "arity": "UNARY",
+            "required": true,
+            "description":"must have a column itemId",
+            "acceptsDataset": true
+        }
+    ],
+    "outputRoles": [
+        {
+            "name": "output_dataset",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+    "params": [
+        {
+            "name": "ebay_app_id",
+            "label": "ebay app id",
+            "type": "STRING",
+            "description":"See https://go.developer.ebay.com",
+            "mandatory": true
+        },
+        {
+            "name": "include_Details",
+            "label": "Include Details",
+            "type": "BOOLEAN",
+            "description": "",
+            "defaultValue":true,
+            "mandatory": true
+        },
+        {
+            "name": "include_ItemSpecifics",
+            "label": "Include Item Specifics (facets)",
+            "type": "BOOLEAN",
+            "description": "",
+            "mandatory": true
+        },
+        {
+            "name": "include_ShippingCosts",
+            "label": "Include ShippingCosts",
+            "type": "BOOLEAN",
+            "description": "",
+            "mandatory": true
+        },
+        {
+            "name": "include_Description",
+            "label": "Include Description (html)",
+            "type": "BOOLEAN",
+            "description": "",
+            "mandatory": true
+        },
+        {
+            "name": "include_TextDescription",
+            "label": "Include TextDescription",
+            "type": "BOOLEAN",
+            "description": "",
+            "mandatory": true
+        },
+        {
+            "name": "include_Variations",
+            "label": "Include Variations (e.g. choice of item color)",
+            "type": "BOOLEAN",
+            "description": "",
+            "mandatory": true
+        }
+    ]
+}
