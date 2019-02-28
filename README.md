@@ -2,5 +2,5 @@ This plugin sends a search query to ebay and create a dataset with the results (
 Another recipe allows to fetch the item details (20 items per query).
 Note that the ebay API is limited to 5000 requests per day.
 
-This IS branch: Fandango
+This is branch: Fandango
 
